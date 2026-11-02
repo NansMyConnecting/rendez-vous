@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Näns Durieux — Prendre rendez-vous</title>
+<meta name="description" content="Réservez un échange avec Näns Durieux, consultant formation et transformation chez MyConnecting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Reproduction fidèle de la page existante (charte MyConnecting) — design mono-thème clair, couleurs fixées. */
+:root{--orange:#ff4b00;--purple:#4e006e;--black:#000;--white:#fff;--gut:max(6.4vw, 16px);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;border:0 solid}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--white);color:var(--black);font-family:"Montserrat",Arial,sans-serif;line-height:1.5}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:transparent;cursor:pointer;border-radius:8px}
+h1,h2,h3{font-size:inherit;font-weight:inherit;text-wrap:balance}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+.topbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;height:88px;padding-left:max(var(--gut), env(safe-area-inset-left,0px));padding-right:max(var(--gut), env(safe-area-inset-right,0px));border-bottom:1px solid #000;background:var(--white)}
+.brand-logo{width:148px;line-height:0;display:block}
+.brand-logo img{width:100%;height:auto}
+.top-cta,footer button{color:var(--purple);letter-spacing:-.2px;font-weight:600}
+.top-cta{font-size:16px}
+.top-cta span,footer button span{color:var(--orange);padding-left:7px}
+.top-cta span{font-size:22px}
+
+.hero{position:relative;overflow:hidden;display:flex;justify-content:space-between;min-height:620px;padding:106px max(var(--gut), env(safe-area-inset-right,0px)) 76px max(var(--gut), env(safe-area-inset-left,0px));color:#fff;background-color:var(--purple);
+  background-image:url("images/hero-background.webp");background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-copy{position:relative;z-index:1;max-width:850px}
+.eyebrow,.section-kicker{letter-spacing:1.6px;text-transform:uppercase;margin:0 0 30px;font-size:10px;font-weight:600}
+.eyebrow span{display:inline-block;background:var(--orange);vertical-align:middle;width:25px;height:1px;margin:-3px 12px 0 0}
+h1,h2{letter-spacing:-3.7px;font-weight:500}
+h1{font-size:clamp(48px,6.1vw,93px);line-height:.99}
+h1 em,h2 em{color:var(--orange);font-style:normal}
+.hero-intro{width:min(550px,100%);margin:37px 0 34px;font-size:15px;line-height:1.65}
+.main-cta{display:inline-flex;justify-content:space-between;min-width:210px;padding:16px 20px;background:var(--orange);color:#fff;border:1px solid var(--orange);border-radius:8px;font-size:12px;font-weight:600;transition:background .2s,color .2s}
+.main-cta:hover{background:#fff;color:var(--orange)}
+.microcopy{opacity:.72;letter-spacing:.2px;margin:17px 0 0;font-size:9px}
+.microcopy-item{display:block}
+.microcopy-sep{display:none}
+.hero-side{position:absolute;z-index:3;bottom:80px;left:50%;transform:translateX(-50%);width:190px;font-size:10px;letter-spacing:.6px}
+.hero-side p{color:var(--orange);text-transform:uppercase;letter-spacing:1.6px;margin:0 0 8px;font-weight:600}
+.hero-side strong{display:block;color:var(--orange);letter-spacing:-.8px;font-size:17px}
+.hero-side > span{display:block;margin-top:9px;font-size:10px;line-height:1.55}
+.hero-grid{position:absolute;inset:0;z-index:1;opacity:.72;pointer-events:none}
+.hero-ring{position:absolute;border:1px solid rgba(255,255,255,.22);border-radius:50%}
+.ring-one{width:720px;height:720px;top:-250px;right:-185px}
+.ring-two{border-color:rgba(255,75,0,.7);width:470px;height:470px;top:-126px;right:-30px}
+.hero-line{position:absolute;bottom:105px;left:0;width:75vw;height:1px;background:rgba(255,255,255,.12);transform-origin:0 center;transform:rotate(-25deg)}
+.hero-dot{position:absolute;display:block;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.dot-one{top:23%;right:30%}
+.dot-two{background:#fff;bottom:18%;left:51%}
+.portrait-fade{position:absolute;z-index:2;bottom:-25px;right:3.5vw;width:min(36vw,480px);height:600px;opacity:.94;overflow:hidden;
+  -webkit-mask-image:linear-gradient(rgba(0,0,0,0) 0%,#000 11%,#000 73%,rgba(0,0,0,0) 100%),linear-gradient(90deg,rgba(0,0,0,0) 0%,#000 26%,#000 100%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(rgba(0,0,0,0) 0%,#000 11%,#000 73%,rgba(0,0,0,0) 100%),linear-gradient(90deg,rgba(0,0,0,0) 0%,#000 26%,#000 100%);mask-composite:intersect}
+.portrait-fade::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--purple) 0%,transparent 44%),linear-gradient(0deg,var(--purple) 0%,transparent 36%);mix-blend-mode:multiply;opacity:.62}
+.portrait-fade img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;filter:saturate(.9) contrast(1.02)}
+
+.intro-section{padding:128px max(var(--gut), env(safe-area-inset-right,0px)) 118px max(var(--gut), env(safe-area-inset-left,0px))}
+.section-kicker{color:var(--orange)}
+.intro-section > .section-kicker{color:var(--purple)}
+.intro-heading{display:grid;grid-template-columns:1.35fr .65fr;align-items:end;gap:60px;max-width:1120px}
+.intro-heading > *{min-width:0}
+.intro-heading h2,.booking-heading h2{font-size:clamp(40px,4.7vw,68px);line-height:1.03}
+.intro-heading h2{color:var(--orange)}
+.intro-heading > p{color:var(--purple);max-width:350px;margin:0 0 5px;font-size:13px;line-height:1.75}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:95px;border-top:1px solid var(--purple)}
+.topic{position:relative;min-height:245px;padding:23px 26px 24px 0;border-right:1px solid var(--purple)}
+.topic:not(:first-child){padding-left:26px}
+.topic:last-child{border-right:none}
+.topic-meta{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:38px}
+.topic-number{color:var(--orange);letter-spacing:1px;font-size:11px}
+.topic h3{color:var(--purple);letter-spacing:-1px;margin:40px 0 12px;font-size:20px;font-weight:600;line-height:1.2}
+.topic p{color:var(--purple);width:90%;font-size:12px;line-height:1.6}
+.topic-icon{width:38px;height:38px;color:var(--orange);flex:0 0 auto}
+.topic-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8px;stroke-linecap:round;stroke-linejoin:round}
+.topic-icon .icon-fill{fill:currentColor;stroke:none}
+
+.quote-section{background:var(--orange);color:#fff;text-align:center;padding:96px max(var(--gut), env(safe-area-inset-right,0px)) 102px max(var(--gut), env(safe-area-inset-left,0px))}
+.reassurance-kicker{letter-spacing:1.6px;text-transform:uppercase;margin:0 0 28px;font-size:10px;font-weight:600}
+.quote-section h2{letter-spacing:-2.6px;max-width:980px;margin:0 auto 30px;font-size:clamp(34px,4.2vw,60px);line-height:1.08}
+.reassurance-copy{max-width:760px;margin:0 auto;font-size:clamp(13px,1.15vw,16px);line-height:1.8}
+.footer-secondary{border:1px solid var(--purple);background:var(--purple);color:#fff;min-width:210px;padding:11px 16px;font-size:12px;font-weight:600;transition:border-color .18s,background .18s}
+.footer-secondary:hover,.footer-secondary:focus-visible{border-color:#fff;background:var(--orange)}
+.reassurance-action{display:inline-flex;justify-content:center;align-items:center;min-height:44px;margin:30px auto 0}
+
+.booking-section{display:grid;grid-template-columns:.68fr 1.32fr;align-items:start;gap:7vw;padding:123px max(var(--gut), env(safe-area-inset-right,0px)) 123px max(var(--gut), env(safe-area-inset-left,0px));color:#fff;background-color:var(--purple);
+  background-image:url("images/booking-background.webp");background-size:cover;background-position:center;background-repeat:no-repeat}
+.booking-section > *{min-width:0}
+.light{color:var(--orange)}
+.booking-heading h2{letter-spacing:-3px}
+.booking-heading > p:not(.section-kicker){max-width:350px;margin:32px 0;font-size:12px;line-height:1.8}
+.booking-card{background:#fff;color:#000;border:1px solid rgba(255,255,255,.33);min-height:520px;display:flex;flex-direction:column}
+.booking-card iframe{width:100%;height:680px;border:0;background:#fff;display:block}
+.booking-fallback{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 18px;color:var(--purple);border-bottom:1px solid #eadfed;font-size:10px;line-height:1.5}
+.booking-fallback a{color:var(--orange);white-space:nowrap;font-weight:600}
+.booking-fallback a:hover{text-decoration:underline}
+.booking-placeholder{flex:1;display:grid;place-content:center;justify-items:center;text-align:center;gap:22px;padding:48px 28px;color:var(--purple)}
+.booking-placeholder .cal{width:64px;height:64px;color:var(--orange)}
+.booking-placeholder .cal svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round}
+.booking-placeholder h3{font-size:clamp(22px,2vw,28px);font-weight:600;letter-spacing:-1px;line-height:1.2;max-width:420px}
+.durations{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.durations span{border:1px solid rgba(78,0,110,.22);padding:10px 14px;font-size:12px;border-radius:8px}
+.durations b{color:var(--orange);font-weight:600}
+.book-cta{display:inline-flex;justify-content:space-between;align-items:center;gap:28px;min-width:255px;min-height:52px;padding:16px 19px;background:var(--orange);color:#fff;border:1px solid var(--orange);font-size:12px;font-weight:600;border-radius:8px;transition:background .2s,color .2s}
+.book-cta:hover{background:#fff;color:var(--orange)}
+.book-cta span{font-size:18px;line-height:1}
+.booking-placeholder small{font-size:10px;opacity:.75}
+
+.whitepaper-section{background:#fff;padding:118px max(var(--gut), env(safe-area-inset-right,0px)) 118px max(var(--gut), env(safe-area-inset-left,0px))}
+.whitepaper-section > h2{color:var(--purple);font-size:clamp(46px,5.2vw,76px);line-height:1.02}
+.whitepaper-subtitle{color:var(--orange);letter-spacing:-.5px;margin:12px 0 64px;font-size:clamp(16px,1.8vw,26px);font-weight:500}
+.whitepaper-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(45px,6vw,92px)}
+.whitepaper-card{display:grid;grid-template-rows:auto auto 1fr auto;align-items:start;border-top:1px solid var(--purple);padding-top:24px}
+.whitepaper-card h3{color:var(--purple);letter-spacing:-1.4px;margin:0 0 32px;font-size:clamp(24px,2.4vw,36px);font-weight:600;line-height:1.15}
+.whitepaper-cover{justify-self:center;width:min(100%,390px);box-shadow:rgba(78,0,110,.18) 0 28px 70px}
+.cover-art{aspect-ratio:1086/1536;width:100%;display:flex;flex-direction:column;justify-content:space-between;padding:12%;color:#fff;background:linear-gradient(160deg,#6a0f8e 0%,var(--purple) 55%,#2a003c 100%);position:relative;overflow:hidden}
+.cover-art.alt{background:linear-gradient(160deg,var(--orange) 0%,#c0337a 60%,var(--purple) 100%)}
+.cover-art::after{content:"";position:absolute;width:120%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.25);right:-60%;top:-30%}
+.cover-art i{font-style:normal;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:600;opacity:.9}
+.cover-art b{font-size:clamp(22px,2.6vw,34px);font-weight:600;letter-spacing:-1.2px;line-height:1.1}
+.cover-art small{font-size:10px;letter-spacing:.6px;opacity:.85}
+.whitepaper-cover img{aspect-ratio:1086/1536;object-fit:cover;width:100%}
+.whitepaper-card > p{color:var(--purple);max-width:480px;margin:34px 0 0;font-size:13px;line-height:1.8}
+.whitepaper-cta{display:inline-flex;justify-content:space-between;align-items:center;gap:22px;width:100%;max-width:480px;min-height:58px;margin-top:30px;padding:15px 18px;background:var(--orange);border:1px solid var(--orange);color:#fff;font-size:11px;font-weight:600;line-height:1.35;border-radius:8px;transition:background .2s,color .2s}
+.whitepaper-cta:hover,.whitepaper-cta:focus-visible{background:#fff;color:var(--orange)}
+.whitepaper-cta span{flex:0 0 auto;font-size:18px}
+
+footer{display:flex;justify-content:space-between;align-items:center;min-height:130px;padding:35px max(var(--gut), env(safe-area-inset-right,0px)) 35px max(var(--gut), env(safe-area-inset-left,0px));background:#fff}
+footer p{color:var(--purple);font-size:10px}
+footer .top-cta{font-size:11px}
+
+.alternate-modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:28px;background:rgba(33,0,46,.72);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s,visibility linear .22s}
+.alternate-modal[data-open="true"]{opacity:1;visibility:visible;pointer-events:auto}
+.alternate-modal-panel{position:relative;width:min(960px,100%);max-height:min(88vh,820px);overflow-y:auto;overscroll-behavior:contain;background:#fff;color:var(--purple);padding:54px 58px 50px;box-shadow:rgba(21,0,31,.38) 0 28px 90px;opacity:0;transform:translateY(16px) scale(.985);transition:transform .22s,opacity .22s}
+.alternate-modal[data-open="true"] .alternate-modal-panel{opacity:1;transform:none}
+.alternate-modal-close{position:absolute;top:18px;right:20px;width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(78,0,110,.25);border-radius:50%;background:#fff;color:var(--purple);font-size:25px;line-height:1}
+.alternate-modal-close:hover{border-color:var(--orange);color:var(--orange)}
+.alternate-modal-kicker{color:var(--orange);letter-spacing:1.6px;text-transform:uppercase;margin:0 48px 17px 0;font-size:10px;font-weight:600}
+.alternate-modal h2{letter-spacing:-2.8px;max-width:720px;font-size:clamp(36px,4vw,55px);line-height:1.04}
+.alternate-modal-intro{max-width:690px;margin:24px 0 34px;font-size:13px;line-height:1.75}
+.alternate-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.alternate-topic{min-height:118px;padding:20px;text-align:left;background:#fff;color:var(--purple);border:1px solid rgba(78,0,110,.22);border-radius:0;transition:border-color .18s,background .18s,transform .18s}
+.alternate-topic:hover{border-color:var(--orange);transform:translateY(-1px)}
+.alternate-topic[aria-pressed="true"]{border-color:var(--orange);background:rgba(255,75,0,.07)}
+.alternate-topic strong,.alternate-topic span{display:block}
+.alternate-topic strong{font-size:13px;line-height:1.35}
+.alternate-topic span{margin-top:9px;font-size:10px;line-height:1.6}
+.alternate-topic-action{display:block;background:rgba(78,0,110,.06);border-color:rgba(78,0,110,.48)}
+.alternate-topic-action .cta{color:var(--orange);margin-top:14px;font-size:11px;font-weight:700}
+.alternate-topic-action small{display:block;margin-top:5px;font-size:9px;opacity:.68}
+.alternate-modal-note{max-width:720px;margin:28px 0 20px;font-size:12px;line-height:1.7}
+.alternate-modal-cta{display:inline-flex;justify-content:space-between;align-items:center;gap:28px;min-width:255px;min-height:44px;padding:16px 19px;background:var(--orange);color:#fff;border:1px solid var(--orange);font-size:11px;font-weight:600}
+.alternate-modal-cta:hover{background:#fff;color:var(--orange)}
+.alternate-modal-cta span{font-size:18px;line-height:1}
+
+@media (min-width:761px){
+  .microcopy{opacity:.9;font-size:11px;line-height:1.75}
+  .hero-side{width:220px;font-size:11px;left:54%}
+  .hero-side p{margin-bottom:10px;font-size:11px}
+  .hero-side strong{font-size:20px}
+  .hero-side > span{margin-top:10px;font-size:12px;line-height:1.5}
+}
+@media (max-width:760px){
+  :root{--gut:24px}
+  .topbar{height:73px}
+  .top-cta{white-space:nowrap;font-size:14px}
+  .brand-logo{width:128px}
+  .hero{display:block;min-height:0;padding-top:70px;padding-bottom:54px}
+  .hero-copy{z-index:3;max-width:100%;padding-right:10px}
+  .hero h1{letter-spacing:-2.4px}
+  .hero-intro{margin:30px 0;font-size:13px}
+  .microcopy{width:58%;line-height:1.7}
+  .microcopy-item{display:block}
+  .microcopy-sep{display:none}
+  .hero-side{position:relative;z-index:3;width:auto;margin-top:46px;inset:auto;transform:none}
+  .portrait-fade{z-index:1;opacity:1;width:300px;height:440px;bottom:-55px;right:-88px}
+  .intro-section{padding-top:82px;padding-bottom:82px}
+  .intro-heading,.booking-section{grid-template-columns:1fr;gap:32px}
+  .topic-grid{grid-template-columns:1fr;margin-top:60px}
+  .topic{border-right:0;border-bottom:1px solid var(--purple);min-height:205px;padding:22px 0 66px!important}
+  .topic h3{margin-top:8px}
+  .topic:last-child{border-bottom:0}
+  .quote-section{padding-top:78px;padding-bottom:82px}
+  .quote-section h2{letter-spacing:-1.8px}
+  .booking-section{padding-top:85px;padding-bottom:85px}
+  .booking-card{min-height:450px}
+  .booking-fallback{flex-direction:column;align-items:flex-start;gap:7px}
+  .booking-fallback a{white-space:normal}
+  .book-cta{min-width:0;width:100%}
+  .whitepaper-section{padding-top:82px;padding-bottom:82px}
+  .whitepaper-section > h2{letter-spacing:-2.2px;font-size:44px}
+  .whitepaper-subtitle{margin:10px 0 48px}
+  .whitepaper-grid{grid-template-columns:1fr;gap:72px}
+  .whitepaper-card h3{margin-bottom:26px;font-size:28px}
+  .whitepaper-cover{width:min(78vw,330px)}
+  .whitepaper-cta{max-width:none}
+  footer p{display:none}
+  .alternate-modal{place-items:end center;padding:0}
+  .alternate-modal-panel{width:100%;max-height:90dvh;padding:42px 24px calc(28px + env(safe-area-inset-bottom,0px));opacity:1;border-radius:20px 20px 0 0;transform:translateY(100%)}
+  .alternate-modal-close{position:sticky;top:0;z-index:2;margin:-28px -8px 0 auto;right:auto;box-shadow:rgba(78,0,110,.12) 0 5px 18px}
+  .alternate-modal h2{letter-spacing:-2px;font-size:37px}
+  .alternate-topic-grid{grid-template-columns:minmax(0,1fr)}
+  .alternate-topic{min-height:88px;padding:17px}
+  .alternate-modal-cta{width:100%;min-height:54px}
+  .ring-one{right:-370px}
+  .ring-two{right:-180px}
+}
+@media (max-width:390px){
+  :root{--gut:20px}
+  .brand-logo{width:118px}
+  .hero h1{letter-spacing:-2.1px;font-size:44px}
+}
+</style>
+</head>
+<body>
+
+<main>
+  <header class="topbar" aria-label="Navigation principale">
+    <a class="brand-logo" href="#accueil" aria-label="MyConnecting - Accueil"><img src="images/logo-myconnecting.png" alt="MyConnecting - Une ambition pour chaque talent"></a>
+    <a class="top-cta" href="#rendez-vous">Prendre rendez-vous <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <section id="accueil" class="hero">
+    <div class="hero-grid" aria-hidden="true"><span class="hero-ring ring-one"></span><span class="hero-ring ring-two"></span><span class="hero-line"></span><span class="hero-dot dot-one"></span><span class="hero-dot dot-two"></span></div>
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Un premier échange pour clarifier votre prochaine étape</p>
+      <h1>Transformer vos enjeux en<br><em>capacités d’agir.</em></h1>
+      <p class="hero-intro">IA, évolution des métiers, management, RSE ou nouveaux enjeux de compétences : partons de votre contexte pour identifier une trajectoire claire, mobilisatrice et adaptée à vos équipes.</p>
+      <a class="main-cta" href="#rendez-vous">Choisir un format d’échange</a>
+      <p class="microcopy"><span class="microcopy-item">15 min pour un premier point</span><span class="microcopy-sep" aria-hidden="true"> · </span><span class="microcopy-item">30 min pour cadrer un besoin</span><span class="microcopy-sep" aria-hidden="true"> · </span><span class="microcopy-item">45 min pour explorer un projet</span></p>
+    </div>
+    <div class="portrait-fade" aria-hidden="true"><img src="images/nans-durieux.webp" alt=""></div>
+    <aside class="hero-side"><p>Avec</p><strong>Näns Durieux</strong><span>Chef de projet (trans)formation</span></aside>
+  </section>
+
+  <section class="intro-section" aria-labelledby="intro-title">
+    <p class="section-kicker">Les enjeux que nous pouvons mettre sur la table</p>
+    <div class="intro-heading">
+      <h2 id="intro-title">Quelle évolution souhaitez-vous rendre possible ?</h2>
+      <p>Évolution des métiers, nouvelles technologies, développement des équipes ou enjeux de performance durable : prenons le temps de mettre votre situation en perspective et d’envisager les premières pistes utiles.</p>
+    </div>
+    <div class="topic-grid">
+      <article class="topic">
+        <div class="topic-meta"><span class="topic-number">01</span><span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="2.5" class="icon-fill"/><path d="m28 28 10 10"/></svg></span></div>
+        <h3>Préparer les compétences de demain</h3>
+        <p>Vous anticipez une évolution de vos métiers ou cherchez à renforcer des compétences techniques, numériques, relationnelles, managériales ou linguistiques.</p>
+      </article>
+      <article class="topic">
+        <div class="topic-meta"><span class="topic-number">02</span><span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="4" class="icon-fill"/><circle cx="10" cy="12" r="5"/><circle cx="38" cy="12" r="5"/><circle cx="24" cy="40" r="5"/><path d="m14 15 7 6M34 15l-7 6M24 35v-7"/></svg></span></div>
+        <h3>Faire évoluer les usages et les façons de travailler</h3>
+        <p>IA, outils digitaux, collaboration, processus ou pratiques managériales : vous souhaitez transformer une nouvelle possibilité en usages réellement utiles et appropriés.</p>
+      </article>
+      <article class="topic">
+        <div class="topic-meta"><span class="topic-number">03</span><span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 33c4 5 10 8 16 7 9-1 15-8 15-17"/><path d="m35 27 6-5 4 7"/><path d="m9 27 9-9 7 6 12-13"/><path d="m31 11h6v6"/></svg></span></div>
+        <h3>Concilier performance, engagement et responsabilité</h3>
+        <p>Relation client, performance commerciale, QVCT, RSE, inclusion ou conformité : vous cherchez à faire progresser l’organisation sans dissocier résultats et attention portée aux personnes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <p class="reassurance-kicker">On peut commencer là où vous en êtes</p>
+    <h2>Pas besoin d’avoir tout cadré pour ouvrir la discussion.</h2>
+    <p class="reassurance-copy">Une question précise, une idée encore floue, un projet qui se dessine ou simplement l’envie de prendre du recul : vous n’avez pas besoin d’arriver avec un brief. On part de ce qui vous occupe aujourd’hui et on prend le temps d’en parler.</p>
+  </section>
+
+  <section id="rendez-vous" class="booking-section" aria-labelledby="booking-title" tabindex="-1">
+    <div class="booking-heading">
+      <p class="section-kicker light">Choisissez l’échange qui vous sera le plus utile</p>
+      <h2 id="booking-title">Commençons par la bonne<br>conversation.</h2>
+      <p>Selon votre besoin, choisissez un premier point de 15 minutes, un échange de cadrage de 30 minutes ou un temps d’exploration de 45 minutes. Nous mettrons vos enjeux en perspective et envisagerons les prochaines étapes pertinentes.</p>
+    </div>
+    <div class="booking-card">
+      <div class="booking-fallback"><span>L’agenda ne s’affiche pas ? Certains navigateurs protégés peuvent le bloquer.</span><a href="https://meetings-eu1.hubspot.com/naens" target="_blank" rel="noopener noreferrer">Ouvrir l’agenda dans une nouvelle fenêtre <span aria-hidden="true">↗</span></a></div>
+      <iframe title="Agenda de réservation de Näns Durieux" src="https://meetings-eu1.hubspot.com/naens?embed=true" loading="eager" allow="payment; clipboard-write"></iframe>
+          </div>
+  </section>
+
+  <section class="whitepaper-section" aria-labelledby="whitepapers-title">
+    <h2 id="whitepapers-title">Pour aller plus loin</h2>
+    <p class="whitepaper-subtitle">(le temps qu’on se rencontre)</p>
+    <div class="whitepaper-grid">
+      <article class="whitepaper-card">
+        <h3>L’esprit critique à l’ère de l’IA</h3>
+        <div class="whitepaper-cover"><img src="images/cover-esprit-critique.webp" alt="Couverture du livre blanc L’esprit critique à l’ère de l’IA" loading="lazy"></div>
+        <p>Pour cultiver le discernement, la prise de recul et la qualité des décisions face aux usages de l’IA.</p>
+        <a class="whitepaper-cta" href="https://myconnecting.fr/wp-content/uploads/lb-lesprit-critique-a-lere-de-lia.pdf" target="_blank" rel="noopener noreferrer">Télécharger « L’esprit critique à l’ère de l’IA » <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="whitepaper-card">
+        <h3>Manager à l’ère de l’IA</h3>
+        <div class="whitepaper-cover"><img src="images/cover-manager-ia.webp" alt="Couverture du livre blanc Manager à l’ère de l’IA" loading="lazy"></div>
+        <p>Pour adopter l’IA sereinement, faire évoluer les pratiques managériales et transformer durablement les usages tout en restant humain.</p>
+        <a class="whitepaper-cta" href="https://myconnecting.fr/wp-content/uploads/MANAGEMENT-A-LERE-DE-LIA-2026.pdf" target="_blank" rel="noopener noreferrer">Télécharger « Manager à l’ère de l’IA » <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>Näns Durieux · MyConnecting</p>
+    <a class="top-cta" href="#rendez-vous">Prendre rendez-vous <span aria-hidden="true">↑</span></a>
+  </footer>
+
+</main>
+</body>
+</html>
